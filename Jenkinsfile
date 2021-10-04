@@ -19,7 +19,7 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-        git([url: 'https://github.com/kaenriquez/dockerapp.git',branch: 'main' credentialsId: 'support-token'])
+        git([url: 'https://github.com/kaenriquez/dockerapp.git',branch: 'main' credentialsId: 'github'])
 
       }
     }
@@ -49,7 +49,7 @@ pipeline {
       }
     }
   }
-}', branch: 'master', credentialsId: 'support-token'])
+}', branch: 'master', credentialsId: 'github'])
 
       }
     }
